@@ -28,7 +28,7 @@
   </div>
   <div class="field">
     <%= f.label :born_on %>
-    <%= f.text_field :born_on %>
+    <%= f.date_select :born_on, order: [:month, :day, :year], start_year: 1910 %>
   </div>
   <div class="field">
     <%= f.label :machines_owned %>
