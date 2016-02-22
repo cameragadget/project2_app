@@ -3,9 +3,13 @@
 <ul class="user">
   <li>
     <p><strong><%= @user.first_name %><%= @user.last_name %></strong></p>
-    <p></p>
+    <p><%= @user.initials %></p>
+    <p><%= @user.born_on %></p>
+    <p><%= @user.email %></p>
+    <p><%= @user.machines_owned %></p>
   </li>
 </ul>
+
 
 
 <p><%= link_to "Make a mistake? Edit user!", edit_user_path %></p>
