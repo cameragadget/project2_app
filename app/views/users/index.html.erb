@@ -5,5 +5,6 @@
     <li>
         <p><%= user.email %></p>
     </li>
+    <p><%= link_to "Show", user %> <%= link_to "Edit", edit_user_path(user) %> <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   <% end %>
 </ul>
