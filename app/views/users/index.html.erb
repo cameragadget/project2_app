@@ -1,0 +1,9 @@
+<h1>Index list of all users</h1>
+
+<ul class="user">
+  <% @users.each do |user| %>
+    <li>
+        <p><%= user.email %></p>
+    </li>
+  <% end %>
+</ul>

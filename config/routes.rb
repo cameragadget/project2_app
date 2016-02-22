@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :index]
 
-  resources :sessions, only [:new, :create, :distroy]
+  resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
 
 end
