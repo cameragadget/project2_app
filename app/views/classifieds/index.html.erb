@@ -1,5 +1,7 @@
 <h1>Classifieds!</h1>
 
+<h3><%= link_to "Make a new classified ad!", new_classified_path %></h3>
+
 <ul class="classified">
   <% @classifieds.each do |classified| %>
     <li>
