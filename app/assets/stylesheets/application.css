@@ -6,6 +6,12 @@ body {
   background-size: cover;
 }
 
+#login {
+  background-color: rgba(128,128,128,.4);
+  width: 180px;
+  padding: 5px;
+}
+
 
 
 /*

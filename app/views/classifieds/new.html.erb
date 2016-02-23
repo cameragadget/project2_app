@@ -1,0 +1,46 @@
+<h1>Create a classified ad!</h1>
+<%= form_for @classified do |f| %>
+  <div class="error_messages">
+    <h2>Hmmmm, something's wrong with your post</h2>
+    <ul>
+      <% for message in @classified.errors.full_messages %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+ <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :post_type %>
+    <%= f.text_field :post_type %>
+  </div>
+  <div class="field">
+    <%= f.label :machine_name %>
+    <%= f.text_field :machine_name %>
+  </div>
+  <div class="field">
+    <%= f.label :condition %>
+    <%= f.text_field :condition %>
+  </div>
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.date_select :price %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_one_url %>
+    <%= f.text_field :photo_one_url %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_two_url %>
+    <%= f.text_field :photo_two_url %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
+

@@ -1,0 +1,48 @@
+<h1>Edit classified</h1>
+<%= form_for @classified do |f| %>
+  <% if @classified.errors.any? %>
+    <div class="error_messages">
+      <h2>Hmmmm, something's wrong with your edit</h2>
+      <ul>
+        <% for message in @classifed.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+ <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :post_type %>
+    <%= f.text_field :post_type %>
+  </div>
+  <div class="field">
+    <%= f.label :machine_name %>
+    <%= f.text_field :machine_name %>
+  </div>
+  <div class="field">
+    <%= f.label :condition %>
+    <%= f.text_field :condition %>
+  </div>
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.date_select :price %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_one_url %>
+    <%= f.text_field :photo_one_url %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_two_url %>
+    <%= f.text_field :photo_two_url %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
+<p><%= link_to "Delete user!", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
+<p><%= link_to "back to main user page", users_path %>

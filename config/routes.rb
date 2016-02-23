@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  root "users#index"
+
+  root "pages#home"
+
+  get '/home' => "pages#home"
+
+  resources :classifieds
 
   resources :users, only: [:get, :show, :new, :create, :edit, :index, :update, :destroy]
 
