@@ -1,0 +1,13 @@
+<h1>Rumors!</h1>
+
+<h3><%= link_to "Start a new rumor!", new_rumor_path %></h3>
+
+<ul class="rumor">
+  <% @rumors.each do |rumor| %>
+    <li>
+      <p><%= rumor.title %></p>
+      <p><%= rumor.body_text %></p>
+    </li>
+       <p><%= link_to "Edit", edit_rumor_path(rumor) %> <%= link_to 'Delete', rumor, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+</ul>

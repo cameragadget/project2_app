@@ -1,0 +1,25 @@
+<h1>Edit this rumor!</h1>
+<%= form_for @rumor do |f| %>
+  <% if @rumor.errors.any? %>
+  <div class="error_messages">
+    <h2>Hmmmm, something's wrong with your post</h2>
+    <ul>
+      <% for message in @classified.errors.full_messages %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+  <div class="field">
+    <%= f.label :body_text %>
+    <%= f.text_field :body_text %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
+<p><%= link_to "Delete post!", rumor_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
+<p><%= link_to "back to main rumor page", rumor_path %>

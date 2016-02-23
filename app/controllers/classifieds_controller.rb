@@ -30,7 +30,7 @@ class ClassifiedsController < ApplicationController
 
   def update
     @classified = Classified.find(params[:id])
-    if @classified.update_attributes(params.require(:classified).permit(:user_id, :post_type, :machine_name, :condition, :price, :location, :photo_one_url, :photo_two_url))
+    if @classified.update_attributes(params.require(:classified).permit(:user_id, :post_type, :machine_name, :body_text, :condition, :price, :location, :photo_one_url, :photo_two_url))
       redirect_to classifieds_path
     else
       render :edit
@@ -47,6 +47,6 @@ class ClassifiedsController < ApplicationController
 private
 
     def classified_params
-      params.require(:classified).permit(:user_id, :post_type, :machine_name, :condition, :price, :location, :photo_one_url, :photo_two_url)
+      params.require(:classified).permit(:user_id, :post_type, :body_text, :machine_name, :condition, :price, :location, :photo_one_url, :photo_two_url)
     end
 end
