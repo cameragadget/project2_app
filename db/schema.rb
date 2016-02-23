@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160222235747) do
     t.string   "location"
     t.string   "condition"
     t.integer  "price"
+    t.string   "email"
     t.string   "photo_one_url"
     t.string   "photo_two_url"
     t.integer  "user_id"

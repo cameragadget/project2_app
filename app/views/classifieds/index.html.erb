@@ -1,0 +1,14 @@
+<h1>Classifieds!</h1>
+
+<ul class="classified">
+  <% @classifieds.each do |classified| %>
+    <li>
+        <p><%= classified.post_type %> | <%= classified.machine_name %></p>
+        <p>img src="<%= classified.photo_one_url %>" | img src="<%= classified.photo_two_url %>"</p>
+        <p><%= classified.body_text %></p>
+        <p><%= classified.condition %> | <%= classified.location %> | <%= classified.price %></p>
+        <p>contact me at: <%= classified.email %></p>
+    </li>
+    <p><%= link_to "Edit", edit_classified_path(classified) %> <%= link_to 'Delete', classified, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+</ul>

@@ -7,6 +7,7 @@ class CreateClassifieds < ActiveRecord::Migration
       t.string :location
       t.string :condition
       t.integer :price
+      t.string :email
       t.string :photo_one_url
       t.string :photo_two_url
       t.references :user, index: true, foreign_key: true

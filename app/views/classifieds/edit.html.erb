@@ -10,10 +10,6 @@
       </ul>
     </div>
 <% end %>
- <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
   <div class="field">
     <%= f.label :post_type %>
     <%= f.text_field :post_type %>
@@ -22,13 +18,17 @@
     <%= f.label :machine_name %>
     <%= f.text_field :machine_name %>
   </div>
+    <div class="field">
+    <%= f.label :body_text %>
+    <%= f.text_field :body_text %>
+  </div>
   <div class="field">
     <%= f.label :condition %>
     <%= f.text_field :condition %>
   </div>
   <div class="field">
     <%= f.label :price %>
-    <%= f.date_select :price %>
+    <%= f.text_field :price %>
   </div>
   <div class="field">
     <%= f.label :location %>
@@ -44,5 +44,5 @@
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
-<p><%= link_to "Delete user!", user_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
-<p><%= link_to "back to main user page", users_path %>
+<p><%= link_to "Delete post!", classified_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
+<p><%= link_to "back to main user page", classifieds_path %>
