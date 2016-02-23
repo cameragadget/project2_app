@@ -19,6 +19,13 @@
     <%= link_to "Sign Up", new_user_path %>
   <% end %>
 </div>
+<div>
+ <ul>
+    <li class="menu_bar"><%= link_to "Home", root_path %></li>
+    <li class="menu_bar"><%= link_to "Classifieds", classifieds_path %></li>
+    <li class="menu_bar"><%= link_to "Rumors", rumors_path %></li>
+  </ul>
+</div>
 
 <%= yield %>
 

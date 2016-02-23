@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-before_action :authorize, except: [:index, :show]
 
   def new
   end
