@@ -11,6 +11,8 @@
         <p><%= classified.condition %> | <%= classified.location %> | <%= classified.price %></p>
         <p>contact me at: <%= classified.email %></p>
     </li>
-    <p><%= link_to "Edit", edit_classified_path(classified) %> <%= link_to 'Delete', classified, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% if current_user %>
+        <p><%= link_to "Edit", edit_classified_path(classified) %> <%= link_to 'Delete', classified, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
   <% end %>
 </ul>

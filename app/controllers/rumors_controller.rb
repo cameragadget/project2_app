@@ -1,4 +1,6 @@
 class RumorsController < ApplicationController
+  before_action :authorize, except: [:index, :show]
+
   def new
     @rumor = Rumor.new
   end

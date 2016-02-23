@@ -1,4 +1,6 @@
 class ClassifiedsController < ApplicationController
+  before_action :authorize, except: [:index, :show]
+
   def new
     @classified = Classified.new
   end
