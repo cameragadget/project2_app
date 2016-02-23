@@ -1,1 +1,36 @@
 
+<div id="mini_classifieds">
+<h3>What's new in classifieds</h3>
+<p><%= link_to "See all classifieds", classifieds_path %></p>
+  <ul id="classified_headlines">
+  <% @classifieds.each do |classified| %>
+    <li>
+      <p><%= classified.post_type %> | <%= classified.machine_name %></p>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<div id="news">
+<h2>Rumor Roundup!</h2>
+<p><%= link_to "See all rumors", rumors_path %></p>
+  <ul id="rumor_headlines">
+  <% @rumors.each do |rumor| %>
+    <li>
+      <p><%= rumor.title %></p>
+      <p><%= rumor.body_text %></p>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
