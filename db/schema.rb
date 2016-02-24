@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223180910) do
+ActiveRecord::Schema.define(version: 20160224181208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,11 +24,17 @@ ActiveRecord::Schema.define(version: 20160223180910) do
     t.string   "condition"
     t.integer  "price"
     t.string   "email"
-    t.string   "photo_one_url"
-    t.string   "photo_two_url"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "image_one_url_file_name"
+    t.string   "image_one_url_content_type"
+    t.integer  "image_one_url_file_size"
+    t.datetime "image_one_url_updated_at"
+    t.string   "image_two_url_file_name"
+    t.string   "image_two_url_content_type"
+    t.integer  "image_two_url_file_size"
+    t.datetime "image_two_url_updated_at"
   end
 
   add_index "classifieds", ["user_id"], name: "index_classifieds_on_user_id", using: :btree

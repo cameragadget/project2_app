@@ -1,5 +1,5 @@
   <h1>Edit classified</h1>
-<%= form_for @classified do |f| %>
+<%= form_for @classified, html: { multipart: true } do |f| %>
   <% if @classified.errors.any? %>
     <div class="error_messages">
       <h2>Hmmmm, something's wrong with your edit</h2>
@@ -35,12 +35,12 @@
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :photo_one_url %>
-    <%= f.text_field :photo_one_url %>
+    <%= f.label :image_one_url %>
+    <%= f.file_field :image_one_url, as: :file  %>
   </div>
   <div class="field">
-    <%= f.label :photo_two_url %>
-    <%= f.text_field :photo_two_url %>
+    <%= f.label :image_two_url %>
+    <%= f.file_field :image_two_url, as: :file  %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
