@@ -1,8 +1,7 @@
-<h1>Classifieds!</h1>
-
-<h3><%= link_to "Make a new classified ad!", new_classified_path %></h3>
 
 <div class="col-sm-8 col-sm-offset-2" id="classified_index">
+<h1 class="group_title">Classifieds!</h1>
+<h3 class="group_title"><%= link_to "Make a new classified ad!", new_classified_path %></h3>
   <% @classifieds.each do |classified| %>
     <div id="c_index_each">
         <p class="lead"><%= classified.post_type %> | <%= classified.machine_name %></p>

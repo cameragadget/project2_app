@@ -73,6 +73,9 @@ header {
   // max-width: 500px;
   border-radius: 5px;
   padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  margin-top: 80px;
 }
 
 #c_index_each {
@@ -87,5 +90,10 @@ header {
   color: navy;
 }
 
-
 .top-buffer { margin-top:30px; }
+
+.group_title {
+  text-align: center;
+}
+
+
