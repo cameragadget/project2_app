@@ -7,7 +7,7 @@
     <div id="classified_headlines">
       <% @classifieds.limit(10).each do |classified| %>
         <div class="short_classified">
-          <%= classified.post_type %> : <%= classified.machine_name %>
+          <a href="/classifieds/<%=classified.id %>"><%= classified.post_type %> : <%= classified.machine_name %></a>
         </div>
       <% end %>
     </div>
