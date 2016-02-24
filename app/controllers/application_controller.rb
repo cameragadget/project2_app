@@ -5,9 +5,10 @@ class ApplicationController < ActionController::Base
 
   private
 
-    helper_method :current_user
+    helper_method :current_user, :is_admin
 
     def current_user
+      # reset_session
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
 
@@ -15,4 +16,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_path, alert: 'You must be logged in' if current_user.nil?
     end
 
+    def is_admin
+      current_user && current_user.admin?
+    end
 end

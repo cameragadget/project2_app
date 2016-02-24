@@ -10,10 +10,7 @@
   </li>
 </ul>
 
+  <p><%= link_to "Make a mistake? Edit your post!", edit_classified_path %></p>
+  <p><%= link_to "I'm full of regret!! Delete!", classified_path, method: :delete, data: { confirm: "Are you sure you want to delete?"} %></p>
+  <p><%= link_to "I love it!! Take me to the classifieds!", classifieds_path %></p>
 
-
-<p><%= link_to "Make a mistake? Edit your post!", edit_classified_path %></p>
-
-<p><%= link_to "I'm full of regret!! Delete!", classified_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
-
-<p><%= link_to "I love it!! Take me to the classifieds!", classifieds_path %></p>

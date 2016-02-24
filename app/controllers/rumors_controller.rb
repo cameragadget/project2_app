@@ -7,7 +7,7 @@ class RumorsController < ApplicationController
 
   def create
     @rumor = Rumor.new(rumor_params)
-    @rumor.user_id = current_user
+    @rumor.user_id = current_user.id
 
     if @rumor.save
       flash[:notice] = "You started a new rumor!"

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :authorize, except: [:index, :show]
+before_action :authorize, except: [:index, :show, :new, :create]
   def new
     @user = User.new
   end
@@ -44,7 +44,7 @@ before_action :authorize, except: [:index, :show]
 
   private
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :initials, :born_on, :machines_owned, :password, :password_confirmation)
+      params.require(:user).permit(:first_name, :last_name, :email, :initials, :born_on, :machines_owned, :admin, :password, :password_confirmation)
     end
 
 

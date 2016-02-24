@@ -7,7 +7,7 @@ class ClassifiedsController < ApplicationController
 
   def create
     @classified = Classified.new(classified_params)
-    @classified.user_id = current_user
+    @classified.user_id = current_user.id
     @classified.email = current_user.email
 
     if @classified.save
