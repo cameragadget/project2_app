@@ -68,4 +68,24 @@ header {
   margin: 5px;
 }
 
+#classified_index {
+  background-color: rgba(224,224,224,.8);;
+  // max-width: 500px;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+#c_index_each {
+  background-color: rgba(224,224,224,1);;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.link {
+  color: navy;
+}
+
+
 .top-buffer { margin-top:30px; }

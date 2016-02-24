@@ -9,7 +9,7 @@
       <p><%= rumor.body_text %></p>
     </li>
       <% if is_admin %>
-       <p><%= link_to "Edit", edit_rumor_path(rumor) %> <%= link_to 'Delete', rumor, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+       <p><%= link_to "Edit", edit_rumor_path(rumor), :class => "link" %> <%= link_to 'Delete', rumor, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link" %></p>
     <% end %>
   <% end %>
 </ul>
