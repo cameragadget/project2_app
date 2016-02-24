@@ -5,8 +5,10 @@
     <li>
         <p><%= user.email %></p>
     </li>
-    <% if user == current_user || is_admin %>
-      <p><%= link_to "Show", user %> <%= link_to "Edit", edit_user_path(user) %> <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% if current_user == nil %>
+        <p></p>
+    <% elsif user == current_user || is_admin %>
+      <p><%= link_to "Show", user, :class => "link" %> <%= link_to "Edit", edit_user_path(user), :class => "link" %> <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link" %></p>
     <% end %>
   <% end %>
 </ul>
