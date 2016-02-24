@@ -6,7 +6,7 @@
   <% @classifieds.each do |classified| %>
     <div id="c_index_each">
         <p class="lead"><%= classified.post_type %> | <%= classified.machine_name %></p>
-        <p><img class ="pic" src="<%= classified.image_one_url %>"><img class="pic" src="<%= classified.image_two_url %>"></p>
+        <p><img class ="pic" src="<%= classified.image_one_url(:thumb) %>"><img class="pic" src="<%= classified.image_two_url(:thumb) %>"></p>
         <p><%= classified.body_text %></p>
         <p>Condition: <%= classified.condition %> | Location: <%= classified.location %> | Price: <%= classified.price %></p>
         <p>contact me at: <a href="mailto:<%= classified.email %>" class="link"><%= classified.email %></a></p>
