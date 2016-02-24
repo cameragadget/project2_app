@@ -21,7 +21,7 @@
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
-<% if rumor.user_id == current_user.id || is_admin %>
+<% if @rumor.user_id == current_user.id || is_admin %>
 <p><%= link_to "Delete post!", rumor_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
 <% end %>
 <p><%= link_to "back to main rumor page", rumor_path %>

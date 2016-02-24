@@ -19,7 +19,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/*body {
+body {
   background: url("http://www.corvallisadvocate.com/wp-content/uploads/2013/02/Pinball-photos-025.jpg") no-repeat center center fixed;
   webkit-background-size: cover;
   moz-background-size: cover;
@@ -35,6 +35,22 @@
 
 .menu_bar {
   display: inline;
-}*/
+}
+
+#mini_classifieds {
+  background-color: rgba(128,128,128,.4);
+  max-width: 300px;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+.short_classified {
+  background-color: rgba(128,128,128,.6);
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+
+}
 
 

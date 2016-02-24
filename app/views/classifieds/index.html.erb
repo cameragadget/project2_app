@@ -12,7 +12,7 @@
         <p>contact me at: <%= classified.email %></p>
     </li>
    <% if classified.user_id == current_user.id || is_admin %>
-        <p><%= link_to "Edit", edit_classified_path(classified) %> <%= link_to 'Delete', classified, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to "show", classified_path(classified) %><%= link_to "Edit", edit_classified_path(classified) %> <%= link_to 'Delete', classified, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <% end %>
   <% end %>
 </ul>

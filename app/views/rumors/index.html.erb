@@ -8,8 +8,10 @@
       <p><%= rumor.title %></p>
       <p><%= rumor.body_text %></p>
     </li>
-      <% if rumor.user_id == current_user.id || is_admin %>
+      <% if is_admin %>
        <p><%= link_to "Edit", edit_rumor_path(rumor) %> <%= link_to 'Delete', rumor, method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <% end %>
   <% end %>
 </ul>
+
+<!-- rumor.user_id == current_user.id || -->
