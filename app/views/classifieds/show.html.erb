@@ -6,7 +6,7 @@
     <p><%= @classified.condition %> | <%= @classified.location %> | <%= @classified.price %></p>
     <p>contact me at: <%= @classified.email %></p>
   </div>
-</div>
+
 
   <% if current_user == nil %>
     <p></p>
@@ -15,3 +15,4 @@
   <p><%= link_to "I'm full of regret!! Delete!", classified_path, method: :delete, data: { confirm: "Are you sure you want to delete?"} , :class => "link" %></p>
   <p><%= link_to "I love it!! Take me to the classifieds!", classifieds_path, :class => "link" %></p>
   <% end %>
+</div>

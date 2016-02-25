@@ -1,48 +1,41 @@
-  <h1>Edit classified</h1>
-<%= form_for @classified, html: { multipart: true } do |f| %>
+ <div class="col-sm-6 col-sm-offset-1" id="edit">
+<%= bootstrap_form_for @classified, html: { multipart: true } do |f| %>
   <% if @classified.errors.any? %>
-    <div class="error_messages">
-      <h2>Hmmmm, something's wrong with your edit</h2>
-      <ul>
-        <% for message in @classifed.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="error_messages">
+    <h2>Hmmmm, something's wrong with your post</h2>
+    <ul>
+      <% for message in @classified.errors.full_messages %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
   <div class="field">
-    <%= f.label :post_type %>
     <%= f.text_field :post_type %>
   </div>
   <div class="field">
-    <%= f.label :machine_name %>
     <%= f.text_field :machine_name %>
   </div>
-    <div class="field">
-    <%= f.label :body_text %>
-    <%= f.text_field :body_text %>
+  <div class="field">
+    <%= f.text_field :body_text, as: :textrea %>
   </div>
   <div class="field">
-    <%= f.label :condition %>
     <%= f.text_field :condition %>
   </div>
   <div class="field">
-    <%= f.label :price %>
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :location %>
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :image_one_url %>
     <%= f.file_field :image_one_url, as: :file  %>
   </div>
   <div class="field">
-    <%= f.label :image_two_url %>
     <%= f.file_field :image_two_url, as: :file  %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
 <p><%= link_to "Delete post!", classified_path, method: :delete, data: { confirm: "Are you sure you want to delete?"}, :class => "link" %></p>
-<p><%= link_to "back to main user page", classifieds_path, :class => "link" %>
+<p><%= link_to "back to main user page", classifieds_path, :class => "link" %></p>
+</div>

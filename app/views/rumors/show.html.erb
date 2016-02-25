@@ -1,11 +1,9 @@
-<h1> Review your rumor! </h1>
-
-<ul class="rumor">
-  <li>
+<div class="col-sm-8 col-sm-offset-2" id="classified_index">
+<div class="c_index_each">
     <p><strong><%= @rumor.title %></strong></p>
     <p><%= @rumor.body_text %></p>
-  </li>
-</ul>
+</div>
+
 
 <% if current_user == nil %>
   <p></p>
@@ -16,4 +14,4 @@
 
 <p><%= link_to "I love it!! Take me to the rumors", rumors_path, :class => "link" %></p>
 
-
+</div>

@@ -1,5 +1,6 @@
+<div class="col-sm-6 col-sm-offset-1" id="edit">
 <h1>Create a new rumor!</h1>
-<%= form_for @rumor do |f| %>
+<%= bootstrap_form_for @rumor do |f| %>
   <% if @rumor.errors.any? %>
   <div class="error_messages">
     <h2>Hmmmm, something's wrong with your post</h2>
@@ -11,13 +12,11 @@
   </div>
 <% end %>
   <div class="field">
-    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-  <div class="field">
-    <%= f.label :body_text %>
     <%= f.text_field :body_text %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
+</div>
