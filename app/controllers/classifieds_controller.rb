@@ -45,6 +45,11 @@ class ClassifiedsController < ApplicationController
     redirect_to classifieds_path
   end
 
+  # def has_image?
+  #   self.image_one_url.present?
+  #   self.image_two_url.present?
+  # end
+
 
 private
 
