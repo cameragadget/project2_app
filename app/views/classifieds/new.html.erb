@@ -1,4 +1,4 @@
- <div class="col-sm-6 col-sm-offset-1" id="edit">
+ <div class="col-sm-6 col-sm-offset-2" id="edit">
 <%= bootstrap_form_for @classified, html: { multipart: true } do |f| %>
   <% if @classified.errors.any? %>
   <div class="error_messages">
@@ -17,7 +17,7 @@
     <%= f.text_field :machine_name %>
   </div>
   <div class="field">
-    <%= f.text_field :body_text, as: :textrea %>
+    <%= f.text_area :body_text, as: :textarea, class: "form-control",rows: "5" %>
   </div>
   <div class="field">
     <%= f.text_field :condition %>
