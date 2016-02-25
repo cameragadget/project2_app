@@ -25,18 +25,16 @@ body {
   moz-background-size: cover;
   o-background-size: cover;
   background-size: cover;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
 header {
   color: black;
-  background-color: rgba(224,224,224,.8);
+  background-color: rgba(224,224,224,1);
   width: auto;
-  padding: 5px;
+  padding: 2px;
 }
 
-.menu_bar {
-  display: inline;
-}
 
 #mini_classifieds {
   background-color: rgba(224,224,224,.8);
@@ -90,7 +88,7 @@ header {
   color: navy;
 }
 
-.top-buffer { margin-top:30px; }
+.top-buffer { margin-top:70px; }
 
 .group_title {
   text-align: center;
@@ -105,7 +103,7 @@ header {
   max-width: 400px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 70px;
 }
 
 .pic {
@@ -116,5 +114,17 @@ header {
 .rowcenter {
   text-align: center;
   margin: auto;
+}
+
+#login {
+  display: inline;
+}
+
+.welcome {
+  margin-top: 15px;
+}
+
+.form-control {
+  margin-bottom: 2px;
 }
 

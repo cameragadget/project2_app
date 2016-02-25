@@ -7,21 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header class="row">
-<div class="col-md-1 col-md-offset-1"><%= link_to "Home", root_path, :class => "link" %></div>
-<div class="col-md-1"><%= link_to "Classifieds", classifieds_path, :class => "link" %></div>
-<div class="col-md-1"><%= link_to "Rumors", rumors_path, :class => "link" %></div>
-<div class="col-md-4 col-md-offset-4" id="login">
-  <% if current_user %>
-    Welcome, <%= current_user.first_name %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Logout', session_path('dummy'), method: :delete, :class => "link"%>
+<header class="navbar navbar-fixed-top" id="navs">
+<ul class="nav navbar-nav pull-left">
+<li roll="presentation" class="active"><%= link_to "Home", root_path, :class => "link" %></li>
+<li roll="presentation" class="active"><%= link_to "Classifieds", classifieds_path, :class => "link" %></li>
+<li roll="presentation" class="active"><%= link_to "Rumors", rumors_path, :class => "link" %></li>
+</ul>
+
+<ul class="nav navbar-nav pull-right" id="login">
+    <% if current_user %>
+      <li roll="presentation" class="welcome">Welcome,&nbsp</li>
+      <li roll="presentation" class="welcome"><%= current_user.first_name %></li>
+      <li roll="presentation"><%= link_to 'Logout', session_path('dummy'), method: :delete, :class => "link"%></li>
   <% else %>
-    <%= link_to 'Login', login_path, :class => "link" %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to "Sign Up", new_user_path, :class => "link" %>
+      <li roll="presentation"><%= link_to 'Login', login_path, :class => "link" %></li>
+      <li roll="presentation"><%= link_to "Sign Up", new_user_path, :class => "link" %></li>
   <% end %>
-</div>
+</ul>
 </header>
 
 <%= yield %>

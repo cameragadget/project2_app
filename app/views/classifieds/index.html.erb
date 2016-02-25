@@ -1,21 +1,19 @@
-
-
 <div class="col-sm-8 col-sm-offset-2" id="classified_index">
-<h1 class="group_title">Classifieds!</h1>
-<h3 class="group_title"><%= link_to "Make a new classified ad!", new_classified_path %></h3>
-  <% @classifieds.each do |classified| %>
-    <div id="c_index_each">
+  <h1 class="group_title">Classifieds!</h1>
+  <h3 class="group_title"><%= link_to "Make a new classified ad!", new_classified_path %></h3>
+    <% @classifieds.each do |classified| %>
+      <div id="c_index_each">
         <p class="lead"><%= classified.post_type %> | <%= classified.machine_name %></p>
         <% if classified.image_one_url(:medium) != "/images/medium/missing.png" %>
           <p><a><%= image_tag classified.image_one_url(:medium), :class => "pic"%></a>
         <% end %>
         <% if classified.image_two_url(:medium) != "/images/medium/missing.png" %>
-        <a><%= image_tag classified.image_two_url(:medium), :class => "pic"%></a>
+          <a><%= image_tag classified.image_two_url(:medium), :class => "pic"%></a>
         <% end %>
         <p><%= classified.body_text %></p>
         <p>Condition: <%= classified.condition %> | Location: <%= classified.location %> | Price: <%= classified.price %></p>
         <p>contact me at: <a href="mailto:<%= classified.email %>" class="link"><%= classified.email %></a></p>
-    </div>
+      </div>
       <% if current_user == nil %>
         <p></p>
       <% elsif classified.user_id == current_user.id || is_admin %>
@@ -24,6 +22,3 @@
     <% end %>
 </div>
 
-
-
-<img src="" alt="">
