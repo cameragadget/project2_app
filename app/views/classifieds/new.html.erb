@@ -1,39 +1,41 @@
-<div class="col-sm-6 col-sm-offset-2" id="edit">
-  <%= bootstrap_form_for @classified, html: { multipart: true } do |f| %>
-    <% if @classified.errors.any? %>
-      <div class="error_messages">
-        <h2>Hmmmm, something's wrong with your post</h2>
-        <ul>
-          <% for message in @classified.errors.full_messages %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
+<div class="container">
+  <div class="edit">
+    <%= bootstrap_form_for @classified, html: { multipart: true } do |f| %>
+      <% if @classified.errors.any? %>
+        <div class="error_messages">
+          <h2>Hmmmm, something's wrong with your post</h2>
+          <ul>
+            <% for message in @classified.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="field">
+        <%= f.text_field :post_type %>
       </div>
+      <div class="field">
+        <%= f.text_field :machine_name %>
+      </div>
+      <div class="field">
+        <%= f.text_area :body_text, as: :textarea, class: "form-control",rows: "5" %>
+      </div>
+      <div class="field">
+        <%= f.text_field :condition %>
+      </div>
+      <div class="field">
+        <%= f.text_field :price %>
+      </div>
+      <div class="field">
+        <%= f.text_field :location %>
+      </div>
+      <div class="field">
+        <%= f.file_field :image_one_url, as: :file  %>
+      </div>
+      <div class="field">
+        <%= f.file_field :image_two_url, as: :file  %>
+      </div>
+      <div class="actions"><%= f.submit %></div>
     <% end %>
-    <div class="field">
-      <%= f.text_field :post_type %>
-    </div>
-    <div class="field">
-      <%= f.text_field :machine_name %>
-    </div>
-    <div class="field">
-      <%= f.text_area :body_text, as: :textarea, class: "form-control",rows: "5" %>
-    </div>
-    <div class="field">
-      <%= f.text_field :condition %>
-    </div>
-    <div class="field">
-      <%= f.text_field :price %>
-    </div>
-    <div class="field">
-      <%= f.text_field :location %>
-    </div>
-    <div class="field">
-      <%= f.file_field :image_one_url, as: :file  %>
-    </div>
-    <div class="field">
-      <%= f.file_field :image_two_url, as: :file  %>
-    </div>
-    <div class="actions"><%= f.submit %></div>
-  <% end %>
+  </div>
 </div>

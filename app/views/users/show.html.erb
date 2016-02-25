@@ -1,19 +1,17 @@
-<h1> Up close and personal! </h1>
-<ul class="user">
-  <li>
+<div class="col-sm-8 col-sm-offset-2" id="classified_index">
+  <h1> Up close and personal! </h1>
+  <div id="c_index_each">
     <p><strong><%= @user.first_name %><%= @user.last_name %></strong></p>
     <p><%= @user.initials %></p>
     <p><%= @user.born_on %></p>
     <p><%= @user.email %></p>
     <p><%= @user.machines_owned %></p>
-  </li>
-</ul>
-
-<% if current_user == nil %>
-  <p></p>
-<% elsif @user.id == current_user.id || is_admin %>
-  <p><%= link_to "Make a mistake? Edit user!", edit_user_path, :class => "link" %></p>
-  <p><%= link_to "I'm full of regret, I like Galaga, not pinball!! Delete!", user_path, method: :delete, data: { confirm: "Are you sure you want to delete?"}, :class => "link" %></p>
-<% end %>
-
-<p><%= link_to "Show me the users!!", users_path, :class => "link" %></p>
+  </div>
+  <% if current_user == nil %>
+    <p></p>
+  <% elsif @user.id == current_user.id || is_admin %>
+    <p><%= link_to "Make a mistake? Edit user!", edit_user_path, :class => "link" %></p>
+    <p><%= link_to "I'm full of regret, I like Galaga, not pinball!! Delete!", user_path, method: :delete, data: { confirm: "Are you sure you want to delete?"}, :class => "link" %></p>
+  <% end %>
+  <p><%= link_to "Show me the users!!", users_path, :class => "link" %></p>
+</div>

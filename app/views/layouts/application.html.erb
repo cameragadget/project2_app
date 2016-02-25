@@ -12,6 +12,13 @@
       <li roll="presentation" class="active"><%= link_to "Home", root_path, :class => "link" %></li>
       <li roll="presentation" class="active"><%= link_to "Classifieds", classifieds_path, :class => "link" %></li>
       <li roll="presentation" class="active"><%= link_to "Rumors", rumors_path, :class => "link" %></li>
+      <li roll="presentation" class="active">
+        <% if current_user == nil %>
+          <p></p>
+        <% elsif current_user.id == current_user.id || is_admin %>
+        <%= link_to "Users", users_path, :class => "link" %>
+        <% end %>
+      </li>
     </ul>
     <ul class="nav navbar-nav pull-right" id="login">
       <% if current_user %>
