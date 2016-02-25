@@ -19,6 +19,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+    font-family: 'DOTMBold';
+    src: url('DOTMBold.TTF');
+    src: url('DOTMBold.TTF') format('truetype');
+}
+
+
 body {
   background: url("http://www.corvallisadvocate.com/wp-content/uploads/2013/02/Pinball-photos-025.jpg") no-repeat center center fixed;
   webkit-background-size: cover;
@@ -93,7 +100,7 @@ header {
 }
 
 .edit {
-  background-color: rgba(224,224,224,1);;
+  background-color: rgba(224,224,224,1);
   border: 1px solid black;
   border-radius: 3px;
   padding: 5px;
@@ -109,18 +116,22 @@ header {
   box-shadow: 5px 5px 5px #888888;
 }
 
-.rowcenter {
-  text-align: center;
-  margin: auto;
-}
-
 #login {
   display: inline;
 }
 
-.welcome {
-  margin-top: 15px;
+
+header > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1):hover {
+  background-color: rgba(224,224,224,1);
+  color: black;
+  text-decoration: none;
+  cursor: default;
 }
+
+.welcome {
+  color: black;
+}
+
 
 .form-control {
   margin-bottom: 2px;
@@ -148,5 +159,32 @@ header {
   padding-bottom: 10px;
   margin: 5px;
 }
+
+.home {
+  font-family: "DOTMBold", cursive, sans-serif;
+  font-size: 50px;
+  color: red;
+  background-color: black;
+}
+
+.logins {
+  display: inline;
+}
+
+
+///// code graveyard //////
+
+
+// .right-to-left {
+//   float: right;
+// }
+
+
+
+// @media (max-width: 767px) {
+//   .right-to-left {
+//     @extend .pull-left;
+//   }
+// }
 
 

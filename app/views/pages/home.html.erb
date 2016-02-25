@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row top-buffer">
-    <div class="col-sm-6" id="mini_classifieds">
+    <div class="col-sm-4" id="mini_classifieds">
       <h2>What's new in classifieds</h3>
       <p><%= link_to "See all classifieds", classifieds_path, :class => "link" %></p>
       <div id="classified_headlines">
         <% @classifieds.order('created_at DESC').limit(10).each do |classified| %>
           <div class="short_classified">
-            <a href="/classifieds/<%=classified.id %>"><%= classified.post_type %> : <%= classified.machine_name %></a>
+            <a href="/classifieds/<%=classified.id %>"><%= classified.post_type %> :&nbsp  <%= classified.machine_name %></a>
           </div>
         <% end %>
     </div>

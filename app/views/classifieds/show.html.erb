@@ -1,6 +1,6 @@
 <div class="col-sm-8 col-sm-offset-2" id="classified_index">
   <div id="c_index_each">
-    <p><strong><%= @classified.post_type %> | <%= @classified.machine_name %></strong></p>
+    <p><strong><%= @classified.post_type %> :&nbsp <%= @classified.machine_name %></strong></p>
     <% if @classified.image_one_url(:medium) != "/images/medium/missing.png" %>
         <p><a><%= image_tag @classified.image_one_url(:medium), :class => "pic"%></a>
     <% end %>
@@ -8,8 +8,8 @@
       <a><%= image_tag @classified.image_two_url(:medium), :class => "pic"%></a>
     <% end %>
     <p><%= @classified.body_text %></p>
-    <p><%= @classified.condition %> | <%= @classified.location %> | <%= @classified.price %></p>
-    <p>contact me at: <%= @classified.email %></p>
+    <p><strong>Condition: </strong><%= @classified.condition %> | <strong>Location: </strong><%= @classified.location %> | <strong>Price: $</strong><%= @classified.price %> </p>
+    <p><strong>contact me at: </strong><a href="mailto:<%= @classified.email %>" class="link"><%= @classified.email %></a></p>
   </div>
   <% if current_user == nil %>
     <p></p>

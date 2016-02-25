@@ -7,9 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-fixed-top" id="navs">
+  <header class="navbar navbar-static-top" id="navs">
+    <ul class="nav navbar-nav pull-right" id="login">
+      <% if current_user %>
+        <li roll="presentation"><a class="welcome">Welcome, <%= current_user.first_name %>!</a></li>
+        <li roll="presentation"><%= link_to 'Logout', session_path('dummy'), method: :delete, :class => "link"%></li>
+      <% else %>
+        <li roll="presentation"><%= link_to 'Login', login_path, :class => "link" %></li>
+        <li roll="presentation"><%= link_to "Sign Up", new_user_path, :class => "link" %></li>
+      <% end %>
+    </ul>
     <ul class="nav navbar-nav pull-left">
-      <li roll="presentation" class="active"><%= link_to "Home", root_path, :class => "link" %></li>
+      <li roll="presentation" class="active"><%= link_to "PinHeads", root_path, :class => "home" %></li>
       <li roll="presentation" class="active"><%= link_to "Classifieds", classifieds_path, :class => "link" %></li>
       <li roll="presentation" class="active"><%= link_to "Rumors", rumors_path, :class => "link" %></li>
       <li roll="presentation" class="active">
@@ -19,16 +28,6 @@
         <%= link_to "Users", users_path, :class => "link" %>
         <% end %>
       </li>
-    </ul>
-    <ul class="nav navbar-nav pull-right" id="login">
-      <% if current_user %>
-        <li roll="presentation" class="welcome">Welcome,&nbsp</li>
-        <li roll="presentation" class="welcome"><%= current_user.first_name %></li>
-        <li roll="presentation"><%= link_to 'Logout', session_path('dummy'), method: :delete, :class => "link"%></li>
-      <% else %>
-        <li roll="presentation"><%= link_to 'Login', login_path, :class => "link" %></li>
-        <li roll="presentation"><%= link_to "Sign Up", new_user_path, :class => "link" %></li>
-      <% end %>
     </ul>
   </header>
   <%= yield %>
