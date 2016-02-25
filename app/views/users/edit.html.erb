@@ -1,48 +1,48 @@
 <div class="container">
-<div id="edit">
-<h1>Edit user</h1>
-<%= bootstrap_form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Hmmmm, something's wrong with your entry</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="field">
-    <%= f.text_field :first_name %>
+  <div id="edit">
+    <h1>Edit user</h1>
+    <%= bootstrap_form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Hmmmm, something's wrong with your entry</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="field">
+        <%= f.text_field :first_name %>
+      </div>
+      <div class="field">
+        <%= f.text_field :last_name %>
+      </div>
+      <div class="field">
+        <%= f.text_field :initials %>
+      </div>
+      <div class="field">
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.date_select :born_on, order: [:month, :day, :year], start_year: 1910 %>
+      </div>
+      <div class="field">
+        <%= f.text_field :machines_owned %>
+      </div>
+      <div class="field">
+        <%= f.text_field :password %>
+      </div>
+      <div class="field">
+        <%= f.text_field :password_confirmation %>
+      </div>
+      <div class="actions"><%= f.submit %></div>
+    <% end %>
+    <% if current_user == nil %>
+      <p></p>
+    <% elsif @user == current_user || is_admin %>
+      <p><%= link_to "Delete user!", user_path, method: :delete, data: { confirm: "Are you sure you want to delete?"}, :class => "link" %></p>
+    <% end %>
+    <p><%= link_to "back to main user page", users_path, :class => "link" %></p>
   </div>
-  <div class="field">
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.text_field :initials %>
-  </div>
-  <div class="field">
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.date_select :born_on, order: [:month, :day, :year], start_year: 1910 %>
-  </div>
-  <div class="field">
-    <%= f.text_field :machines_owned %>
-  </div>
-  <div class="field">
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.text_field :password_confirmation %>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>
-  <% if current_user == nil %>
-       <p></p>
-  <% elsif @user == current_user || is_admin %>
-    <p><%= link_to "Delete user!", user_path, method: :delete, data: { confirm: "Are you sure you want to delete?"}, :class => "link" %></p>
-  <% end %>
-<p><%= link_to "back to main user page", users_path, :class => "link" %></p>
-</div>
 </div>

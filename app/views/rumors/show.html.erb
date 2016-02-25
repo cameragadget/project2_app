@@ -1,17 +1,13 @@
 <div class="col-sm-8 col-sm-offset-2" id="classified_index">
-<div class="c_index_each">
+  <div class="c_index_each">
     <p><strong><%= @rumor.title %></strong></p>
     <p><%= @rumor.body_text %></p>
-</div>
-
-
-<% if current_user == nil %>
-  <p></p>
-<% elsif @rumor.user_id == current_user.id || is_admin %>
-  <p><%= link_to "This rumor is full of lies! Edit!", edit_rumor_path %></p>
-  <p><%= link_to "This rumor is just outright wrong! Delete!", rumor_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
-<% end %>
-
-<p><%= link_to "I love it!! Take me to the rumors", rumors_path, :class => "link" %></p>
-
+  </div>
+  <% if current_user == nil %>
+    <p></p>
+  <% elsif @rumor.user_id == current_user.id || is_admin %>
+    <p><%= link_to "This rumor is full of lies! Edit!", edit_rumor_path %></p>
+    <p><%= link_to "This rumor is just outright wrong! Delete!", rumor_path, method: :delete, data: { confirm: "Are you sure you want to delete this terrible tweet?"} %></p>
+  <% end %>
+  <p><%= link_to "I love it!! Take me to the rumors", rumors_path, :class => "link" %></p>
 </div>

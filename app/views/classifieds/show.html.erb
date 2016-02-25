@@ -2,22 +2,20 @@
   <div id="c_index_each">
     <p><strong><%= @classified.post_type %> | <%= @classified.machine_name %></strong></p>
     <% if @classified.image_one_url(:medium) != "/images/medium/missing.png" %>
-          <p><a><%= image_tag @classified.image_one_url(:medium), :class => "pic"%></a>
-        <% end %>
-        <% if @classified.image_two_url(:medium) != "/images/medium/missing.png" %>
-        <a><%= image_tag @classified.image_two_url(:medium), :class => "pic"%></a>
-        <% end %>
+        <p><a><%= image_tag @classified.image_one_url(:medium), :class => "pic"%></a>
+    <% end %>
+    <% if @classified.image_two_url(:medium) != "/images/medium/missing.png" %>
+      <a><%= image_tag @classified.image_two_url(:medium), :class => "pic"%></a>
+    <% end %>
     <p><%= @classified.body_text %></p>
     <p><%= @classified.condition %> | <%= @classified.location %> | <%= @classified.price %></p>
     <p>contact me at: <%= @classified.email %></p>
   </div>
-
-
   <% if current_user == nil %>
     <p></p>
   <% elsif @classified.user_id == current_user.id || is_admin %>
-  <p><%= link_to "Make a mistake? Edit your post!", edit_classified_path, :class => "link"%></p>
-  <p><%= link_to "I'm full of regret!! Delete!", classified_path, method: :delete, data: { confirm: "Are you sure you want to delete?"} , :class => "link" %></p>
-  <p><%= link_to "I love it!! Take me to the classifieds!", classifieds_path, :class => "link" %></p>
+    <p><%= link_to "Make a mistake? Edit your post!", edit_classified_path, :class => "link"%></p>
+    <p><%= link_to "I'm full of regret!! Delete!", classified_path, method: :delete, data: { confirm: "Are you sure you want to delete?"} , :class => "link" %></p>
+    <p><%= link_to "I love it!! Take me to the classifieds!", classifieds_path, :class => "link" %></p>
   <% end %>
 </div>

@@ -1,12 +1,11 @@
 <div class="col-sm-8 col-sm-offset-2" id="classified_index">
-<h1>Index list of all users</h1>
-
+  <h1>Index list of all users</h1>
   <% @users.each do |user| %>
-  <div id="c_index_each">
-        <p><%= user.email %></p>
+    <div id="c_index_each">
+      <p><%= user.email %></p>
     </div>
     <% if current_user == nil %>
-        <p></p>
+      <p></p>
     <% elsif user == current_user || is_admin %>
       <p><%= link_to "Show", user, :class => "link" %> <%= link_to "Edit", edit_user_path(user), :class => "link" %> <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link" %></p>
     <% end %>
