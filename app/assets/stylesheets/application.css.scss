@@ -102,10 +102,19 @@ header {
   border-radius: 3px;
   padding: 5px;
   margin: 5px;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .pic {
   margin-left: 10px;
   box-shadow: 5px 5px 5px #888888;
+}
+
+.rowcenter {
+  text-align: center;
+  margin: auto;
 }
 

@@ -19,7 +19,7 @@ class ClassifiedsController < ApplicationController
   end
 
   def index
-    @classifieds = Classified.all
+    @classifieds = Classified.order('created_at DESC').all
   end
 
   def show

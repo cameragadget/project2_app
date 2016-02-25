@@ -1,5 +1,7 @@
+<div class="container">
+<div id="edit">
 <h1>Sign Up</h1>
-<%= form_for @user do |f| %>
+<%= bootstrap_form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Hmmmm, something's wrong with your entry</h2>
@@ -11,37 +13,30 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :first_name %>
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %>
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :initials %>
     <%= f.text_field :initials %>
   </div>
   <div class="field">
-    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :born_on %>
     <%= f.date_select :born_on, order: [:month, :day, :year], start_year: 1910 %>
   </div>
   <div class="field">
-    <%= f.label :machines_owned %>
     <%= f.text_field :machines_owned %>
   </div>
   <div class="field">
-    <%= f.label :password %>
     <%= f.text_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
     <%= f.text_field :password_confirmation %>
   </div>
   <div class="actions"><%= f.submit %></div>
 <% end %>
-
+</div>
+</div>

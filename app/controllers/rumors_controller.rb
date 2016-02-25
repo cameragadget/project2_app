@@ -18,7 +18,7 @@ class RumorsController < ApplicationController
   end
 
     def index
-      @rumors = Rumor.all
+      @rumors = Rumor.order('created_at DESC').all
     end
 
     def show
