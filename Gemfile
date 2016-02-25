@@ -55,3 +55,4 @@ end
 
   gem 'rails_12factor', group: :production
 
+ruby "2.2.3"
