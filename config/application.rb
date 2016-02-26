@@ -33,6 +33,5 @@ module Project2App
     config.active_record.raise_in_transactional_callbacks = true
 
   end
-      config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 
 end
