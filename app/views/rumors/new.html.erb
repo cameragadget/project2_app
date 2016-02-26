@@ -12,12 +12,8 @@
           </ul>
         </div>
       <% end %>
-      <div class="field">
-        <%= f.text_field :title %>
-      </div>
-      <div class="field">
-        <%= f.text_area :body_text, as: :textarea, class: "form-control",rows: "5" %>
-      </div>
+      <%= f.text_field :title %>
+      <%= f.text_area :body_text, as: :textarea, class: "form-control",rows: "5" %>
       <div class="actions"><%= f.submit %></div>
     <% end %>
   </div>

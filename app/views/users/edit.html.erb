@@ -12,30 +12,14 @@
           </ul>
         </div>
       <% end %>
-      <div class="field">
-        <%= f.text_field :first_name %>
-      </div>
-      <div class="field">
-        <%= f.text_field :last_name %>
-      </div>
-      <div class="field">
-        <%= f.text_field :initials %>
-      </div>
-      <div class="field">
-        <%= f.text_field :email %>
-      </div>
-      <div class="field">
-        <%= f.date_select :born_on, order: [:month, :day, :year], start_year: 1910 %>
-      </div>
-      <div class="field">
-        <%= f.text_field :machines_owned %>
-      </div>
-      <div class="field">
-        <%= f.text_field :password %>
-      </div>
-      <div class="field">
-        <%= f.text_field :password_confirmation %>
-      </div>
+      <%= f.text_field :first_name %>
+      <%= f.text_field :last_name %>
+      <%= f.text_field :initials %>
+      <%= f.text_field :email %>
+      <%= f.date_select :born_on, order: [:month, :day, :year], start_year: 1910 %>
+      <%= f.text_field :machines_owned %>
+      <%= f.text_field :password %>
+      <%= f.text_field :password_confirmation %>
       <div class="actions"><%= f.submit %></div>
     <% end %>
     <% if current_user == nil %>

@@ -5,6 +5,7 @@
     <div id="c_index_each">
       <p class="lead"><%= rumor.title %></p>
       <p><%= rumor.body_text %></p>
+      <p>Spread by <%= rumor.user.initials %></p>
     </div>
     <% if current_user == nil %>
       <p></p>
