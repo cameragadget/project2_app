@@ -7,8 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
-Classified.destroy_all
-Rumor.destroy_all
 
 users = User.create([{ first_name: "Jonah", last_name: "Sobol", initials: "LBS", born_on: DateTime.now, email: "jonah@jonah.com", admin: true, password: "abc123", password_confirmation: "abc123" },
                       { first_name: "Oat", last_name: "Asdon", initials: "OAT", born_on: DateTime.now, email: "oat@oat.com", admin: false, password: "abc123", password_confirmation: "abc123" },
