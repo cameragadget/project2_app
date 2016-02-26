@@ -21,8 +21,8 @@
 
 @font-face {
     font-family: 'DOTMBold';
-    src: url('/DOTMBold.TTF');
-    src: url('/DOTMBold.TTF') format('truetype');
+    src: font-url('DOTMBold.TTF');
+    src: font-url('DOTMBold.TTF') format('truetype');
 }
 
 
