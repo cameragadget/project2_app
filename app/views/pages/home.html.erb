@@ -19,6 +19,7 @@
         <div id="article">
           <p class="lead"><%= rumor.title %></p>
           <p><%= rumor.body_text %></p>
+          <p><small>Spread by <%= rumor.user.initials %> on <%= rumor.created_at.strftime("%m-%d-%Y") %></small></p>
         </div>
       <% end %>
     </div>

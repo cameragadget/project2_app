@@ -1,6 +1,6 @@
 <div class="col-sm-8 col-sm-offset-2" id="classified_index">
   <h1 class="group_title">Classifieds!</h1>
-  <h3 class="group_title"><%= link_to "Make a new classified ad!", new_classified_path %></h3>
+  <h3 class="group_title"><%= link_to "Make a new classified ad!", new_classified_path, :class => "link"  %></h3>
     <% @classifieds.each do |classified| %>
       <div id="c_index_each">
         <p class="lead"><%= classified.post_type %> :&nbsp <%= classified.machine_name %></p>
@@ -11,7 +11,7 @@
           <a><%= image_tag classified.image_two_url(:medium), :class => "pic"%></a>
         <% end %>
         <p><%= classified.body_text %></p>
-        <p><strong>Condition: </strong><%= classified.condition %> | <strong>Location: </strong><%= classified.location %> | <strong>Price: $</strong><%= classified.price %></p>
+        <p><strong>Condition: </strong><%= classified.condition %> | <strong>Location: </strong><%= classified.location %> | <strong>Price: $</strong><%= classified.price %> | Posted on: <%= classified.created_at.strftime("%m-%d-%Y") %></p>
         <p><strong>Contact me at: </strong><a href="mailto:<%= classified.email %>" class="link"><%= classified.email %></a></p>
         <% if current_user == nil %>
           <p></p>
