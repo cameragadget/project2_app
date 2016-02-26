@@ -2,7 +2,7 @@
   <div class="c_index_each">
     <p><strong><%= @rumor.title %></strong></p>
     <p><%= @rumor.body_text %></p>
-    <p><small>Spread by <%= rumor.user.initials %> on <%= rumor.created_at.strftime("%m-%d-%Y") %></small></p>
+    <p><small>Spread by <%= @rumor.user.initials %> on <%= @rumor.created_at.strftime("%m-%d-%Y") %></small></p>
   </div>
   <% if current_user == nil %>
     <p></p>
