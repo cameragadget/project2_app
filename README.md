@@ -96,6 +96,12 @@ IF YOU DON'T DO THIS PEOPLE WILL START RUNNING SPAM SERVERS OFF YOUR YOUR HOSTIN
 
 Now follow the instructions on [paperclip's tutorials](https://devcenter.heroku.com/articles/paperclip-s3) for linking your S3 account to your Heroku account.
 
+Because Heroku handles things a bit differently than your localhost server, make sure that if you're using assets such as fonts or images that you pre-load them in 
+
+`/config/innitializers/assets.rb`
+
+`Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")`
+
 Now git add, git commit, git push heroku master, and you're ready to go!!
 
 -----
