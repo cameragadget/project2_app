@@ -65,7 +65,7 @@ header {
 }
 
 #article {
-  background-color: rgba(224,224,224,1);;
+  background-color: rgba(224,224,224,1);
   border: 1px solid black;
   border-radius: 3px;
   padding: 5px;
@@ -73,7 +73,17 @@ header {
 }
 
 #classified_index {
-  background-color: rgba(224,224,224,.8);;
+  background-color: rgba(224,224,224,.8);
+  border-radius: 5px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+#user_index {
+  text-align: center;
+  background-color: rgba(224,224,224,.8);
   border-radius: 5px;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -82,7 +92,16 @@ header {
 }
 
 #c_index_each {
-  background-color: rgba(224,224,224,1);;
+  background-color: rgba(224,224,224,1);
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+}
+
+#u_index_each {
+  text-align: center;
+  background-color: rgba(224,224,224,1);
   border: 1px solid black;
   border-radius: 3px;
   padding: 5px;
@@ -140,7 +159,7 @@ header > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1):hover {
 .window {
   margin: auto;
   text-align: center;
-  background-color: rgba(224,224,224,.8);;
+  background-color: rgba(224,224,224,.8);
   border-radius: 5px;
   margin-top: 150px;
   max-width: 250px;
@@ -153,7 +172,7 @@ header > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1):hover {
 }
 
 .session {
-  background-color: rgba(224,224,224,1);;
+  background-color: rgba(224,224,224,1);
   border: 1px solid black;
   border-radius: 3px;
   padding-bottom: 10px;
