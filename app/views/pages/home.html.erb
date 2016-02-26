@@ -3,6 +3,7 @@
     <div class="col-sm-4" id="mini_classifieds">
       <h2>What's new in classifieds</h3>
       <p><%= link_to "See all classifieds", classifieds_path, :class => "link" %></p>
+      <p><%= link_to "Post a new classified ad!", new_classified_path, :class => "link" %></p>
       <div id="classified_headlines">
         <% @classifieds.order('created_at DESC').limit(10).each do |classified| %>
           <div class="short_classified">
@@ -14,6 +15,7 @@
   <div class="col-sm-6 col-sm-offset-2" id="news">
     <h2>Rumor Roundup!</h2>
     <p><%= link_to "See all rumors", rumors_path, :class => "link" %></p>
+    <p><%= link_to "Start a new rumor!", new_rumor_path, :class => "link" %></p>
     <div id="rumor_headlines">
       <% @rumors.order('created_at DESC').limit(3).each do |rumor| %>
         <div id="article">
