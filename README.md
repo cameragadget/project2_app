@@ -63,8 +63,10 @@ Classifieds wireframe layout:
 Reference page wireframe layout, unfortunately, due to time constraints this page was ice boxed and will be released in forthcoming updates:
 ![references page wireframe](https://trello-attachments.s3.amazonaws.com/56c8ce08ad704eb8d37b63a9/3264x2448/25434083d89149df73011805709b6943/IMG_4992.JPG)
 
-ERB relational diagrams were created to express the relationships between all of the models at play in this application. The models included in this release of the app include: Users, Classifieds, Rumors(formerly News), and Sessions (not pictured). A user relates to classified and rumors in a one to many relationship.  When references is released it will relate to users in a many to many relationship which will be joined by a High Scores Model.
-![ERB wireframe](https://trello-attachments.s3.amazonaws.com/56c9003aaa04f9edbc57b164/3264x2448/9a857bfa2463c91c49684d91b1e7f274/IMG_4993.JPG)
+ERD relational diagrams were created to express the relationships between all of the models at play in this application. The models included in this release of the app include: Users, Classifieds, Rumors(formerly News), and Sessions (not pictured). A user relates to classified and rumors in a one to many relationship.  When references is released it will relate to users in a many to many relationship which will be joined by a High Scores Model.
+
+(due to github's missing support for the EXIF "Orientation" tag, this photo is rotated 90 degrees until I can find a solution)
+![ERD wireframe](https://trello-attachments.s3.amazonaws.com/56c9003aaa04f9edbc57b164/3264x2448/9a857bfa2463c91c49684d91b1e7f274/IMG_4993.JPG)
 
 ---
 
@@ -120,7 +122,7 @@ Following feedback from my last project I elected to put equal focus on design/s
 
 ------
 
-User Stories, wireframes, and ERB diagram avaialble at:
+User Stories, wireframes, and ERD diagram avaialble at:
 [https://trello.com/b/Gmq3EqaH/project-2-pinheads](https://trello.com/b/Gmq3EqaH/project-2-pinheads)
 
 Full project available at:
